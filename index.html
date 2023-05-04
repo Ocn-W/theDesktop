@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../CSS/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d9453c4a92.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Konkhmer+Sleokchher&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <title>Desktop</title>
+</head>
+
+
+<body>
+    <div class="desktop-apps">
+        <button class="desktop-app" ondblclick="openApp(); showBrowserTab()"><img src="../images/IE.png"><p>Web Browser</p></button>
+        <button class="desktop-app" ondblclick=""><img src="../images/MSPaint.png"><p>PaintIT</p></button>
+        <button class="desktop-app" ondblclick=""><img src="../images/YhMsngr.png"><p>Messenger</p></button> 
+    </div>
+
+    <div class="app-container hidden" id="app">
+        <div class="app-header" id="header">
+            <div class="app-info">
+                <img src="../images/IE.png">
+                <p>Web Browser</p>
+            </div>
+            <div class="app-btns">
+                <button class="app-btn" onclick="toggleApp()"><i class="fa-solid fa-window-minimize" style="color: #ffffff;"></i></button>
+                <button class="app-btn" onclick=""><i class="fa-solid fa-window-maximize" style="color: #ffffff;"></i></button>
+                <button class="close-btn" onclick="closeApp()"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></button>
+            </div>
+            
+        </div>
+
+        <div class="app-page" id="appPage">
+            <div>
+                <div class="browserBar">
+                    <div class="search-btns">
+                        <button>File</button>
+                        <button>Edit</button>
+                        <button>View</button>
+                        <button>Favorite</button>
+                        <button>Tools</button>
+                        <button>Help</button>
+                    </div>
+                    <div class="toolbar">
+                        <img src="../images/L-Arrow.png" style="height:28px; margin-left:10px; margin-right:5px;">
+                        <span style="font-size:14px">Back</span>
+                        <i class="fa-solid fa-caret-down" style="font-size:12px; margin-left:1rem;"></i>
+                        <img src="../images/R-Arrow.png"  style="height:28px; margin-left:1.5rem; margin-right:5px;">
+                        <i class="fa-solid fa-caret-down" style="font-size:12px; margin-left:1rem;"></i>
+                        <img src="../images/CancelLoad.png" style="height:28px; margin-left:1rem; margin-right:1rem;">
+                        <img src="../images/Refresh.png" style="height:28px; margin-left:0; margin-right:0;">
+                        <img src="../images/HomeButton.png" style="height:28px; margin-left:1rem; margin-right:0; padding-right:1rem;border-right:1px solid grey;">
+                        <img src="../images/Magnifying Glass.png" style="height:28px; margin-left:1rem; margin-right:5px;"> 
+                        <span style="font-size:14px">Search</span>
+                        <img src="../images/Favorites.png" style="height:28px; margin-left:1rem; margin-right:5px;">
+                        <span style="font-size:14px">Favorites</span>   
+                    </div>
+                    <div class="addressbar">
+                        <span style="font-size: 14px; color:grey; margin-left:5px;">Address</span>
+                        <input type="text" placeholder="https://www.">
+                        <img src="../images/Go! button.png" style="height: 26px">
+                        <span style="font-size: 14px; margin-left:5px;">Go</span>
+                    </div>
+                </div>
+                <div class="web-content">
+                    <img src="../images/BroswerIcon.png" style="height: 128px; width: 128px;">
+                    <h1>World Wide Web</h1>
+                    <h3>The power of the internet at your fingertips!</h3>
+                    <span class="input-field">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #000000; margin-right: 10px;"></i>
+                        <input type="text" placeholder="Search..." style="width:50%; margin-bottom:1rem;">
+                    </span>
+                    <button onclick="randomLink()" class="web-search-btn">Search The Web!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="taskbar" id="taskbar">
+        <button class="start" onclick=""><img src="../images/icons8-windows-xp.svg"><em>start</em></button>
+
+        <div class="bar-apps">
+            <button class="bar-app" onclick=""><img src="../images/MSPaint.png"></button>
+            <button class="bar-app" onclick=""><img src="../images/YhMsngr.png"></button>
+            <button class="bar-app" onclick="openApp(); showBrowserTab()"><img src="../images/IE.png"></button>
+        </div>
+
+        <div class="bar-tabs">
+            <button class="bar-tab hidden" id="browser" onclick="toggleApp()"><img src="../images/IE.png">Web Browser</button>
+            <button class="bar-tab hidden" id="paint" onclick="toggleApp()"><img src="../images/MSPaint.png">MS Paint</button>
+            <button class="bar-tab hidden" id="messenger" onclick=""><img src="../images/YhMsngr.png">Yahoo! Messenger</button>
+        </div>
+
+    </div>
+
+<script src="../Javascript/main.js"></script>
+<script src="../Javascript/randomsites.js"></script>
+</body>
+</html>

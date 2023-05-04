@@ -1,0 +1,336 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html,
+body {
+    margin: 0;
+    background-image: url(../images/windowsXPBkg.jpg);
+    background-size: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+/* MAIN TASK BAR FEATURES */
+
+.taskbar {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: end;
+    width: 100%;
+    background: linear-gradient(to bottom, #5d96e7, #1c64ff);
+    background-position: bottom center;
+    background-size: 100% calc(100% - 3px);
+    height: 30px;
+}
+
+/* INTERACTIVE APP ICONS*/
+
+.bar-app img {
+    max-height: 24px;
+    width: auto;
+    padding: 2px;
+}
+
+.bar-apps button {
+    background: none;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+}
+
+.bar-app:hover {
+    box-shadow: 0px 1px 5px rgb(203, 225, 255) inset;
+    transition: .1s ease-in 0s all;
+}
+.bar-app:active {
+    box-shadow: 0px 1px 8px rgb(0, 26, 63) inset;
+    transition: .1s ease 0s all;
+}
+
+/* START BUTTON */
+
+.start {
+    background: linear-gradient(to bottom, #46dd4e, #10811f);
+    background-position: bottom center;
+    border-style: none;
+    background-size: 100% calc(100% - 3px);
+    height: 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 1px 8px #042508 inset;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    text-shadow: 0px -1px 0px #124b01;
+    font-family: 'Tahoma', sans-serif;
+}
+
+.start img {
+    height: 1rem;
+}
+
+.start:hover {
+    box-shadow: 0px 1px 0px #042508 inset;
+}
+.taskbar .start:active {
+    background: linear-gradient(to bottom, #10811f, #46dd4e);
+}
+
+/* TASKBAR APP TABS */
+
+.bar-tabs {
+    margin-left: 1rem;
+    display: flex;
+}
+
+.bar-tabs img {
+    height: 24px;
+    width: auto;
+}
+
+.bar-tab {
+    align-items: center;
+    box-shadow: 0px 1px 10px #1c77f2 inset;
+    border: 1.5px #0157c7 solid;
+    background-image: linear-gradient(to bottom, #82b6ff, #0157c7);
+    background-size: 100% calc(100% + 3px);
+    border-radius: 5px;
+    color: #000000;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 12px;
+    padding: 6px 12px;
+    height: 30px;
+}
+
+.bar-tab:hover {
+    background-image: linear-gradient(to top, #82b6ff, #0157c7);
+    color: white;
+    transition: .1s ease 0s all;
+}
+
+.bar-tab:active {
+    background-image: linear-gradient(to top, #1053b1, #004297);
+    color: white;
+    transition: .1s ease 0s all;
+}
+
+/* DESKTOP APPS */
+.desktop-apps {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.desktop-app {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    margin: 1rem;
+    border: 1px solid rgba(139, 139, 139, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.desktop-app img {
+    height: 32px;
+    width: auto;
+}
+
+.desktop-app:hover {
+    border: 1px dotted rgba(71, 71, 71, 0.8);
+    cursor: pointer;
+}
+
+.desktop-app:active {
+    border: 1px dotted rgba(139, 139, 139, 0.5);
+    color: white;
+}
+
+/* APP CONTAINER */
+
+.app-container {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    margin-top: 15px;
+    border: 10px solid blue;
+    height: 80%;
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px #1c77f2 inset;
+    border: 1.5px #0157c7 solid;
+    background-color: white;
+    resize: both;
+    min-width: max-content;
+    max-height: 95%;
+    max-width: 100%;
+}
+
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    border: 5px solid blue;
+    background-color: blue;
+    box-shadow: 0px 1px 10px #1c77f2 inset;
+    border: 1.5px #0157c7 solid;
+    background-image: linear-gradient(to bottom, #82b6ff, #0157c7);
+    background-size: 100% calc(100% + 3px);
+}
+
+.app-info {
+    display: flex;
+    align-items: center;
+    
+}
+
+.app-info p {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-shadow: 0px -1px 0px black;
+}
+
+.app-info img {
+    height: 1rem;
+    margin: 5px;
+}
+
+.app-btn {
+    border-radius: 5px;
+    margin: 3px;
+    box-shadow: 0px 1px 10px #1c77f2 inset;
+    border: 1.5px white inset;
+    background-image: linear-gradient(to bottom, #82b6ff, #0157c7);
+    background-size: 100% calc(100% + 3px);
+}
+
+.app-btn:hover {
+    background-image: linear-gradient(to top, #82b6ff, #0157c7);
+    transition: .1s ease 0s all;
+}
+
+.app-btn:active {
+    background-image: linear-gradient(to top, #1053b1, #004297);
+    border: 1.5px darkgrey inset;
+    transition: .1s ease 0s all;
+}
+
+.close-btn {
+    border: 1.5px white inset;
+    border-radius: 5px;
+    margin: 3px;
+    box-shadow: 0px 1px 10px #f21c1c inset;
+    background-image: linear-gradient(to bottom, #ff8282, #c70101);
+    background-size: 100% calc(100% + 3px);
+}
+
+.close-btn:hover {
+    background-image: linear-gradient(to top, #ff8282, #c70101);
+    transition: .1s ease 0s all;
+}
+
+.close-btn:active {
+    background-image: linear-gradient(to top, #b11010, #970000);
+    border: 1.5px darkgrey inset;
+    transition: .1s ease 0s all;
+}
+
+/* APPS */
+
+iframe {
+    height: 100%;
+    width: auto;
+    resize: both;
+}
+
+.web-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.browserBar {
+    background-color: lightgrey;
+    border-top: 1px solid white;
+    border-bottom: 1px solid darkgrey;
+}
+
+.search-btns {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.browserBar button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin: 5px 7px;
+}
+
+.browserBar button:hover {
+    background-color: darkgrey;
+}
+
+.browserBar button:active {
+    background-color: grey;
+}
+
+.toolbar {
+    display: flex;
+    width: auto;
+    align-items: center;
+    margin-bottom: 2px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid grey;
+    height: 50px;
+}
+
+.addressbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    border-bottom: 1px solid darkgray;
+}
+
+.addressbar input {
+    width: 50%;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    border: 1px solid blue;
+}
+
+.web-content img {
+    margin: 0 auto;
+}
+
+.web-content h1 {
+    font-family: 'Bebas Neue', serif;
+    font-size: 3rem;
+}
+.web-content h2 {
+    font-family: 'Konkhmer Sleokchher', cursive;
+    font-size: 1.5rem;
+}
+.web-content h3 {
+    font-family: 'Playfair Display', cursive;
+    font-size: 1rem;
+}
+
+.web-content .web-search-btn {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px;
+}
