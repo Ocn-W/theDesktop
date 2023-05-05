@@ -84,14 +84,20 @@ let dragStartY;
 let initialX;
 let initialY;
 
-// When the user clicks on the header, start dragging
-browserHeader.addEventListener('mousedown', function(e) {
+// When the user clicks or taps on the header, start dragging
+browserHeader.addEventListener('mousedown', startBrowserDragging);
+browserHeader.addEventListener('touchstart', startBrowserDragging);
+
+function startBrowserDragging(e) {
+  // Use e.touches if it's a touch event
+  const touch = e.touches ? e.touches[0] : e;
+
   webDragging = true;
   browserApp.style.zIndex = 1;
   paintApp.style.zIndex = 0;
   // Record the starting position
-  dragStartX = e.clientX;
-  dragStartY = e.clientY;
+  dragStartX = touch.clientX;
+  dragStartY = touch.clientY;
 
   // Record the initial position of the appContainer
   const computedStyle = window.getComputedStyle(browserApp);
@@ -100,40 +106,33 @@ browserHeader.addEventListener('mousedown', function(e) {
 
   // Prevent text selection during drag
   e.preventDefault();
-});
+}
 
-// When the user releases the mouse button, stop dragging
-document.addEventListener('mouseup', function(e) {
+// When the user releases the mouse button or lifts their finger, stop dragging
+document.addEventListener('mouseup', stopBrowserDragging);
+document.addEventListener('touchend', stopBrowserDragging);
+
+function stopBrowserDragging(e) {
   webDragging = false;
-});
-
-// When the user moves the mouse, update the position of the appContainer if we're currently dragging
-document.addEventListener('mousemove', function(e) {
-  if (webDragging) {
-    // Calculate the new position
-    const dragX = e.clientX - dragStartX;
-    const dragY = e.clientY - dragStartY;
-    const newX = initialX + dragX;
-    const newY = initialY + dragY;
-
-    // Set the new position of the appContainer
-    browserApp.style.left = newX + 'px';
-    browserApp.style.top = newY + 'px';
-  }
-});
+}
 
 //DRAG FUNCTION FOR PAINT | USES SAME INITIAL POS TRACKING VARIABLES
 let paintDragging = false;
 
-// When the user clicks on the header, start dragging
-paintHeader.addEventListener('mousedown', function(e) {
-  paintDragging = true;
+// When the user clicks or taps on the header, start dragging
+paintHeader.addEventListener('mousedown', startPaintDragging);
+paintHeader.addEventListener('touchstart', startPaintDragging);
 
+function startPaintDragging(e) {
+  // Use e.touches if it's a touch event
+  const touch = e.touches ? e.touches[0] : e;
+
+  paintDragging = true;
   paintApp.style.zIndex = 1;
   browserApp.style.zIndex = 0;
   // Record the starting position
-  dragStartX = e.clientX;
-  dragStartY = e.clientY;
+  dragStartX = touch.clientX;
+  dragStartY = touch.clientY;
 
   // Record the initial position of the appContainer
   const computedStyle = window.getComputedStyle(paintApp);
@@ -142,19 +141,42 @@ paintHeader.addEventListener('mousedown', function(e) {
 
   // Prevent text selection during drag
   e.preventDefault();
-});
+}
 
-// When the user releases the mouse button, stop dragging
-document.addEventListener('mouseup', function(e) {
+// When the user releases the mouse button or lifts their finger, stop dragging
+document.addEventListener('mouseup', stopPaintDragging);
+document.addEventListener('touchend', stopPaintDragging);
+
+function stopPaintDragging(e) {
   paintDragging = false;
-});
+}
 
-// When the user moves the mouse, update the position of the appContainer if we're currently dragging
-document.addEventListener('mousemove', function(e) {
-  if (paintDragging) {
+// When the user moves their mouse or finger, update the position of the appContainer if we're currently dragging
+document.addEventListener('mousemove', drag);
+document.addEventListener('touchmove', drag);
+
+function drag(e) {
+  if (webDragging) {
+    // Use e.touches if it's a touch event
+    const touch = e.touches ? e.touches[0] : e;
+
     // Calculate the new position
-    const dragX = e.clientX - dragStartX;
-    const dragY = e.clientY - dragStartY;
+    const dragX = touch.clientX - dragStartX;
+    const dragY = touch.clientY - dragStartY;
+    const newX = initialX + dragX;
+    const newY = initialY + dragY;
+
+    // Set the new position of the appContainer
+    browserApp.style.left = newX + 'px';
+    browserApp.style.top = newY + 'px';
+  }
+  if (paintDragging) {
+    // Use e.touches if it's a touch event
+    const touch = e.touches ? e.touches[0] : e;
+
+    // Calculate the new position
+    const dragX = touch.clientX - dragStartX;
+    const dragY = touch.clientY - dragStartY;
     const newX = initialX + dragX;
     const newY = initialY + dragY;
 
@@ -162,4 +184,4 @@ document.addEventListener('mousemove', function(e) {
     paintApp.style.left = newX + 'px';
     paintApp.style.top = newY + 'px';
   }
-});
+}

@@ -3,11 +3,11 @@
     overflow: hidden;
 }
 
-html,
 body {
     margin: 0;
     background-image: url("images/windowsXPBkg.jpg");
-    background-size: cover;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
 }
 
 .hidden {
@@ -223,15 +223,14 @@ body {
     margin-top: 15px;
     border: 10px solid blue;
     height: 80%;
-    width: 60%;
+    width: 80%;
     border-radius: 5px;
     box-shadow: 0px 1px 2px #1c77f2 inset;
     border: 1.5px #0157c7 solid;
     background-color: white;
     resize: both;
-    min-width: max-content;
-    max-height: 95%;
-    max-width: 100%;
+    min-height: 60%;
+    min-width: 50%;
 }
 
 
@@ -385,3 +384,30 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
+
+/* Responsive Params */
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+    body {
+        display: flex
+    }  
+    .browser-container,
+    .paint-container {
+        transform: scale(0.5);
+    }
+    .bar-apps {
+        display: none;
+    }
+  }
+  
+  /* For tablet devices */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        display: flex
+    }   
+    .browser-container,
+    .paint-container {
+        transform: scale(0.7);
+    }
+  }
