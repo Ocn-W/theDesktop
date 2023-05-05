@@ -387,6 +387,7 @@ body {
 
 
 /* Responsive Params */
+
 /* For mobile devices */
 @media only screen and (max-width: 767px) {
     body {
@@ -394,20 +395,34 @@ body {
     }  
     .browser-container,
     .paint-container {
-        transform: scale(0.5);
+        resize:both;
     }
     .bar-apps {
         display: none;
+    }
+    .browserBar,
+    .toolbar {
+        height: fit-content;
+    }
+    .toolbar span {
+        display: none;
+    }
+    .toolbar img{
+        width: auto;
     }
   }
   
   /* For tablet devices */
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     body {
-        display: flex
+        display: flex;
     }   
     .browser-container,
     .paint-container {
-        transform: scale(0.7);
+        resize:both;
+    }
+    .browserBar,
+    .toolbar {
+        height: fit-content;
     }
   }
