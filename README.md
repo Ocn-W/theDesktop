@@ -4,7 +4,7 @@
  
 This Desktop Experience aims to replicate the nostalgic experience of using a classic Windows XP desktop. This tool immerses users in a recreation of the beloved operating system, complete with "Microsoft Paint" (JS Paint by [1j01](https://github.com/1j01/jspaint)), a psuedo Internet Explorer that serves as a random website generator, a live messaging system to chat with other visitors currently using The Desktop (Live Chat by [Chatango](https://chatango.com/)), and a taskbar reminiscent of the early 2000s. This passion project transports users back in time, evoking a sense of nostalgia while providing unique entertainment away from the noise of social media. Indulge in a trip down memory lane with my attempt at a Windows XP-inspired Desktop and Random Website Generator and relive the charm of the past through a modern lens.
 
-![theDesktop01](https://user-images.githubusercontent.com/112736754/236704599-29738b04-e646-4ac0-9a1d-bcc9e792a023.png) ![theDesktop02](https://user-images.githubusercontent.com/112736754/236704624-59ae63f6-e636-4aae-8bd7-edb72d4cbb2e.png)
+![theDesktop02](https://user-images.githubusercontent.com/112736754/236704624-59ae63f6-e636-4aae-8bd7-edb72d4cbb2e.png)
 
 ## User Guide
 
