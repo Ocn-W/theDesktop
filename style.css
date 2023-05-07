@@ -392,6 +392,8 @@ body {
     height: 50%;
     width: auto;
     resize: both;
+    min-width: 20%;
+    min-height: 30%;
 }
 
 .msngr-header {
