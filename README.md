@@ -45,4 +45,4 @@ Most of the issues I seem to run into have been on mobile. For desktop everthing
 
 ## Final Notes
 
-This is my very first major project in my coding journey away from tutorials and online classes so any feedback is greatly appreciated. My main interest is front end design but I also enjoy the nitty gritty and working the logic out. I wrote the bulk of this code through applying the general ideas of what I have learned so far through Codeacademy and tutorials (~8 months from no knowledge at all). I am in the middle of learning React and have been seeing a lot of love for Svelte and intend to check that out at some point too. That being said, I am always looking for opportunies and collaborations with other developers or artist at any level so please reach out and [lets work](mailto:ocean.wrng@gmail.com) on some stuff!
+This is my very first major project in my coding journey away from tutorials and online classes so any feedback is greatly appreciated. I am always looking for opportunies and collaborations with other developers or artist at any level so please reach out and [lets work](mailto:ocean.wrng@gmail.com) on some stuff!
