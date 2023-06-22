@@ -39,10 +39,9 @@ Most of the issues I seem to run into have been on mobile. For desktop everthing
 
 [Chatango](https://chatango.com/) Live Chat Messaging Service
 
-[Random-Ize](https://random-ize.com/random-website/) Random Website Database (*inspect element ftw*)
+[Random-Ize](https://random-ize.com/random-website/) Random Website Database
 
-[Icon Archive](https://www.iconarchive.com/) For all icons used in this project (***IN THE .0001% CHANCE A SPECIFIC CREATOR SEES THEIR ICON IN HERE LET ME KNOW AND I WILL ADD YOU SPECIFICALLY. I AM BROKE DO NOT SUE ME PLEASE.***)
-
+[Icon Archive](https://www.iconarchive.com/) For all icons used in this project 
 ## Final Notes
 
 This is my very first major project in my coding journey away from tutorials and online classes so any feedback is greatly appreciated. I am always looking for opportunies and collaborations with other developers or artist at any level so please reach out and [lets work](mailto:ocean.wrng@gmail.com) on some stuff!
